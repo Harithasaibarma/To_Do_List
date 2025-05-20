@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="task-input">
+            <input type="text" id="task" placeholder="Enter task">
+            <select id="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="date" id="deadline">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Hidden initially -->
+        <div id="task-container" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Completed</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="task-list"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span id="theme-label">Light Mode</span>
+        <button id="voice-btn">
+            🎙️ Speak
+        </button>
+        <div class="sort-buttons">
+            <button onclick="sortTasks('deadline')">Sort by Deadline</button>
+            <button onclick="sortTasks('priority')">Sort by Priority</button>
+        </div>
+    </div>
+    <!-- <button id="voice-btn">
+        🎙️ Speak
+    </button> -->
+    <!-- <div class="sort-buttons">
+        <button onclick="sortTasks('deadline')">Sort by Deadline</button>
+        <button onclick="sortTasks('priority')">Sort by Priority</button>
+    </div> -->
+    
+</body>
+</html>
