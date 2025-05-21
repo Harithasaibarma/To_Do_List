@@ -36,17 +36,17 @@ pip install flask
 Create app.py with a basic route:
 
 from flask import Flask, render_template
-
 app = Flask(__name__)
-
 @app.route('/')
 def index():
     return render_template('index.html')
 if __name__ == '__main__':
     app.run(debug=True)
+    
 Place your index.html in a templates/ folder and CSS/JS files inside static/
 Run the app
 python app.py
+
 Open your browser and go to http://127.0.0.1:5000/
 
 📁 Project Structure
@@ -57,13 +57,16 @@ Open your browser and go to http://127.0.0.1:5000/
 ├── static/
 │   ├── style.css
 │   └── script.js
+
 🚀 Future Enhancements
+
 🔄 Persistent task storage (localStorage or database)
 👥 User login and task sync
 📱 Mobile responsiveness
 🔔 Notifications for approaching deadlines
 
 🙋‍♀️ Developed By
+
 Haritha Sai Barama
 📧barmaharithasai@gmail.com
 🔗 linkedin.com/in/haritha-sai-barama-6167a525b                                                                  
