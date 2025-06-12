@@ -43,14 +43,11 @@ The interface is **responsive** and **beginner-friendly** with a modern design:
 git clone https://github.com/yourusername/todo-list-app.git
 cd todo-list-app
 
-2. Set up a Python Flask server (if you're using url_for):
+2. **Set up a Python Flask server (if you're using url_for):**
 Install Flask:
 
-bash
-Copy
-Edit
 pip install flask
-Create app.py with basic setup:
+**Create app.py with basic setup:**
 
 from flask import Flask, render_template
 
